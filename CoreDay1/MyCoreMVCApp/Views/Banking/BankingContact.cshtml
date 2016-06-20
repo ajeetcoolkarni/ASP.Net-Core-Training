@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Banking Contact";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@Html.ActionLink("Home", "BankingHome")
+@Html.ActionLink("Contact", "BankingContact")
+@Html.ActionLink("Accounts", "AccountsInfo")
+@Html.ActionLink("About", "BankingAboutUs")
+
+<div style="background-color:orangered">
+    <span>Name :</span><span> @ViewData["Person"]</span><br />
+    <span>Email :</span><span> @ViewData["Email"]</span><br />
+    <span>Cell :</span><span> @ViewData["ContactNo"]</span><br />
+</div>

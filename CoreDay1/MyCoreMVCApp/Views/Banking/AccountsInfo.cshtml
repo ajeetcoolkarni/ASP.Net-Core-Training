@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Banking Contact";
+    @model IEnumerable<Account>
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@Html.ActionLink("Home", "BankingHome")
+@Html.ActionLink("Contact", "BankingContact")
+@Html.ActionLink("Accounts", "AccountsInfo")
+@Html.ActionLink("About", "BankingAboutUs")
+
+@{
+    foreach (var item in Model)
+    {
+    <div style="background-color:orangered">
+        <span> @Html.LabelFor(m=>m.FirstOrDefault().AccName) : </span><span>@item.AccName</span><br />
+        <span> @Html.LabelFor(m => m.FirstOrDefault().AccNo) : </span><span>@item.AccNo</span><br />
+        <span> @Html.LabelFor(m => m.FirstOrDefault().AccBalance) : </span><span>@item.AccBalance</span><br />
+        <span> @Html.LabelFor(m => m.FirstOrDefault().AccType) : </span><span>@item.AccType</span><br />
+        <hr />
+    </div>
+}
+}
+
